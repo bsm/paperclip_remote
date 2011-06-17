@@ -1,0 +1,27 @@
+= Paperclip remote URL plugin
+
+Allows fetching files/attachments from remote locations.
+
+== Installation
+
+Just add <tt>gem paperclip-remote</tt> to your Gemfile.
+
+Alternatively, run <tt>sudo gem install paperclip-remote</tt> and add
+<tt>require 'paperclip_remote'</tt> to your app.
+
+== Example
+
+In the model, you can specify:
+
+  class User < ActiveRecord::Base
+    has_attached_file :photo, :remote => true
+    attr_accessible   :photo, :photo_remote_url
+  end
+
+In the form you can then have:
+
+  <%= f.label :photo, "Please update a photo" %>
+  <%= f.file_field :photo %>
+  <br/>
+  <%= f.label :photo_remote_url, "or specify a URL" %>
+  <%= f.text_field :photo_remote_url %>
