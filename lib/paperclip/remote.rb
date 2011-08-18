@@ -26,9 +26,11 @@ module Paperclip::Remote
 
       before_validation do |record|
         url = record.send(:"#{name}_remote_url")
-        if url.present? && (upload = open(URI.parse(url)) rescue nil)
-          upload.original_filename = File.basename(upload.base_uri.path)
-          send :"#{name}=", upload
+        if url.present? && (io = open(URI.parse(url)) rescue nil)
+          def io.original_filename
+            File.basename(base_uri.path)
+          end
+          send :"#{name}=", io
         end
       end
     end

@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.name        = "paperclip-remote"
   s.summary     = "Plugin for Paperclip"
   s.description = "Allows fetching attachments from remote locations"
-  s.version     = '0.1.0'
+  s.version     = '0.2.0'
 
   s.authors     = ["Dimitrij Denissenko"]
   s.email       = "dimitrij@blacksquaremedia.com"
