@@ -4,4 +4,4 @@ rvm:
   - ree
 gemfiles:
   - Gemfile
-  - Gemfile.rails-3.0.x
+  - Gemfile.paperclip-2.3.x
