@@ -2,6 +2,6 @@ rvm:
   - 1.9.2
   - 1.9.3
   - ree
-gemfiles:
+gemfile:
   - Gemfile
   - Gemfile.paperclip-2.3.x
