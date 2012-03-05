@@ -7,6 +7,10 @@ require 'bundler/setup'
 
 module Rails
 
+  def self.logger
+    nil
+  end
+
   def self.root
     @root ||= Pathname.new(File.dirname(__FILE__))
   end
