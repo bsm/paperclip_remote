@@ -3,6 +3,10 @@ rvm:
   - 1.9.3
 gemfile:
   - Gemfile
+  - Gemfile.paperclip-3.3.x
+  - Gemfile.paperclip-3.2.x
+  - Gemfile.paperclip-3.1.x
+  - Gemfile.paperclip-3.0.x
   - Gemfile.paperclip-2.6.x
   - Gemfile.paperclip-2.5.x
   - Gemfile.paperclip-2.4.x

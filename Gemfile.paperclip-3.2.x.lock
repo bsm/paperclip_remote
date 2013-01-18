@@ -54,9 +54,10 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.19)
     multi_json (1.5.0)
-    paperclip (2.4.5)
-      activerecord (>= 2.3.0)
-      activesupport (>= 2.3.2)
+    paperclip (3.2.1)
+      activemodel (>= 3.0.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
       cocaine (>= 0.0.2)
       mime-types
     polyglot (0.3.3)
@@ -113,7 +114,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  paperclip (~> 2.4.0)
+  paperclip (~> 3.2.0)
   paperclip-remote!
   rails
   rake
