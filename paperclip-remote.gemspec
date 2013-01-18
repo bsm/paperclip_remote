@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.files        = Dir['LICENSE', 'README.rdoc', 'lib/**/*', 'rails/**/*']
 
-  s.add_dependency "paperclip", ">= 2.3.0"
+  s.add_dependency "paperclip", ">= 2.3.0", "< 3.1.4"
   s.add_development_dependency "rake"
   s.add_development_dependency "rspec"
   s.add_development_dependency "webmock"
