@@ -8,6 +8,7 @@ require 'webmock/rspec'
 WebMock.disable_net_connect!
 
 require 'rails'
+FileUtils.mkdir_p File.expand_path("../../tmp", __FILE__)
 Rails.logger = Logger.new(File.expand_path("../../tmp/test.log", __FILE__))
 
 require 'active_record'
