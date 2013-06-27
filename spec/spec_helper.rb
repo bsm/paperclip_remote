@@ -24,5 +24,5 @@ end
 
 
 class User < ActiveRecord::Base
-  has_attached_file :photo, remote: true, path: File.expand_path("../../tmp/:attachment/:id", __FILE__)
+  has_attached_file :photo, remote: true, path: File.expand_path("../../tmp/:attachment/:id", __FILE__), :url => "/system/:attachment/:id/:style/:filename"
 end

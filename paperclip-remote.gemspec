@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.name        = "paperclip-remote"
   s.summary     = "Plugin for Paperclip"
   s.description = "Allows fetching attachments from remote locations"
-  s.version     = '0.6.0'
+  s.version     = '0.7.0'
 
   s.authors     = ["Dimitrij Denissenko"]
   s.email       = "dimitrij@blacksquaremedia.com"
@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.files        = Dir['LICENSE', 'README.rdoc', 'lib/**/*', 'rails/**/*']
 
-  s.add_dependency "paperclip", ">= 2.3.0"
+  s.add_dependency "paperclip", ">= 3.0.0"
   s.add_development_dependency "rake"
   s.add_development_dependency "rspec"
   s.add_development_dependency "webmock"
