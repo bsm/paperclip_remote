@@ -17,6 +17,10 @@ require 'open-uri'
 #    <%= f.text_field :photo_remote_url %>
 #
 module Paperclip::Remote
+  def self.included(base)
+    locale_path = Dir.glob(File.dirname(__FILE__) + "/locales/*.{rb,yml}")
+    I18n.load_path += locale_path unless I18n.load_path.include?(locale_path)
+  end
 
   def has_attached_file_with_remote(name, options = {})
     original = has_attached_file_without_remote(name, options)
@@ -45,6 +49,7 @@ module Paperclip::Remote
           send :"#{name}=", url
         end
       rescue OpenURI::HTTPError
+        record.errors.add(:"#{name}_remote_url", :unreachable)
       end
     end
 
