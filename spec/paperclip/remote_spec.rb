@@ -63,6 +63,8 @@ describe Paperclip::Remote do
     subject.valid?
     subject.photo.should_not be_file
     req.should have_been_made
+
+    subject.errors.should be_present
   end
 
 end
