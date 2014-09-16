@@ -35,7 +35,7 @@ module Paperclip::Remote
 
     before_validation do |record|
       url = record.send(:"#{name}_remote_url")
-      break unless url.present?
+      next unless url.present?
 
       begin
         if Paperclip::VERSION < "3.1.4"
